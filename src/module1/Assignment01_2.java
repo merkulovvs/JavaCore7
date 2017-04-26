@@ -7,29 +7,26 @@ import java.util.Scanner;
 public class Assignment01_2 {
     public static void main(String[] args) {
 
-        int[] initArray = new int[5];
-        int[] sortedAarray = new int[5];
+        int[] array = new int[5];
         Scanner in = new Scanner(System.in);
 
         for(int i = 0; i < 5; i++) {
             System.out.println("Enter number " + (i + 1) + ":");
-            sortedAarray[i] = in.nextInt();
+            array[i] = in.nextInt();
         }
 
-        for(int i = 0; i < 5; i++)
-            initArray[i] = sortedAarray[i];
+        System.out.println("\nInitial array: " + Arrays.toString(array));
 
         int temp;
         for(int i = 0; i < 4; i++)
             for(int j = 0; j < 4; j++){
-               if(sortedAarray[j] > sortedAarray[j+1]){
-                   temp = sortedAarray[j+1];
-                   sortedAarray[j+1] = sortedAarray[j];
-                   sortedAarray[j] = temp;
+               if(array[j] > array[j+1]){
+                   temp = array[j+1];
+                   array[j+1] = array[j];
+                   array[j] = temp;
                }
             }
 
-        System.out.println("\nInitial array: " + Arrays.toString(initArray));
-        System.out.println("Sorted array: " + Arrays.toString(sortedAarray));
+        System.out.println("Sorted array: " + Arrays.toString(array));
     }
 }
