@@ -10,7 +10,7 @@ public class Assignment01_2 {
         int[] array = new int[5];
         Scanner in = new Scanner(System.in);
 
-        for(int i = 0; i < 5; i++) {
+        for(int i = 0; i < array.length; i++) {
             System.out.println("Enter number " + (i + 1) + ":");
             array[i] = in.nextInt();
         }
