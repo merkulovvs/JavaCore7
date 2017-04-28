@@ -18,11 +18,11 @@ public class Assignment01_2 {
         System.out.println("\nInitial array: " + Arrays.toString(array));
 
         int temp;
-        for(int i = 0; i < 4; i++)
-            for(int j = 0; j < 4; j++){
-               if(array[j] > array[j+1]){
-                   temp = array[j+1];
-                   array[j+1] = array[j];
+        for(int i = 0; i < array.length; i++)
+            for(int j = 1; j < (array.length - i); j++){
+               if(array[j - 1] > array[j]){
+                   temp = array[j-1];
+                   array[j-1] = array[j];
                    array[j] = temp;
                }
             }
